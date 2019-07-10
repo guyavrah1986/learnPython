@@ -1,5 +1,5 @@
 
-def strings_definition():
+def strings_usage_example():
     func_name = "strings_definition - "
     print(func_name + "start")
     str1 = "Doesn't"
