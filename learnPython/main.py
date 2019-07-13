@@ -15,6 +15,8 @@ def call_proper_usage_function(argv):
         template_method_pattern_usage_example()
     elif argv[1] == "listsUsage":
         lists_usage_example()
+    elif argv[1] == "functionsUsage":
+        functions_definition_and_execution_usage_example()
     else:
         print(func_name + "got an invalid argument")
 
