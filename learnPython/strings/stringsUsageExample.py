@@ -28,6 +28,6 @@ def immutablity_of_string():
     #print(func_name + "now str1 is:" + str1)
 
     # what actually happens here is that a "new string" is being constructed and
-    # then aassgined (thus overrides) the old value of str1. 
+    # then aassgined (thus overrides) the old value of str1.
     str1 = "new_str"
     print(func_name + "now str1 is:" + str1)
