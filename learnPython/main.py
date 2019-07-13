@@ -2,6 +2,7 @@ import sys
 
 from learnPython.strings.stringsUsageExample import strings_usage_example
 from learnPython.templateMethodPattern.templateMethodPattern import template_method_pattern_usage_example
+from learnPython.lists.listsUsageExample import lists_usage_example
 
 
 def call_proper_usage_function(argv):
@@ -12,6 +13,8 @@ def call_proper_usage_function(argv):
         strings_usage_example()
     elif argv[1] == "templateMethodPattern":
         template_method_pattern_usage_example()
+    elif argv[1] == "listsUsage":
+        lists_usage_example()
     else:
         print(func_name + "got an invalid argument")
 

@@ -2,6 +2,6 @@
 help/
 learnPython.egg-info/
 learnPython/__pycache__/
-learnPython/strings/__pycache__/
+learnPython/*/__pycache__/
 learnPython_env/
 
