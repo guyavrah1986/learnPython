@@ -1,8 +1,9 @@
 import sys
 
-from learnPython.strings.stringsUsageExample import strings_usage_example
+from learnPython.strings_3_1_2.stringsUsageExample import strings_usage_example
 from learnPython.templateMethodPattern.templateMethodPattern import template_method_pattern_usage_example
-from learnPython.lists.listsUsageExample import lists_usage_example
+from learnPython.lists_3_1_3.listsUsageExample import lists_usage_example
+from learnPython.functions_4_7.functionDefinitionAndExecutionUsageExample import functions_definition_and_execution_usage_example
 
 
 def call_proper_usage_function(argv):
