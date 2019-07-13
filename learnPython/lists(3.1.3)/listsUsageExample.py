@@ -19,3 +19,6 @@ def basic_usage_lists():
     # list concatenation is also possible
     list3 = list1 + list2
     print(func_name + "list3(list1+ + list2):" + str(list3))
+    # it is possible to define list of lists
+    list4 = [list1, list3]
+    print(func_name + "list4 is:" + str(list4))
