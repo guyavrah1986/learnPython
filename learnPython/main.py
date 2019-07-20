@@ -4,6 +4,7 @@ from learnPython.strings_3_1_2.stringsUsageExample import strings_usage_example
 from learnPython.templateMethodPattern.templateMethodPattern import template_method_pattern_usage_example
 from learnPython.lists_3_1_3.listsUsageExample import lists_usage_example
 from learnPython.functions_4_7.functionDefinitionAndExecutionUsageExample import functions_definition_and_execution_usage_example
+from learnPython.tcpdumpRunner.tcpdumpRunner import run_tcpdump_on_local_machine
 
 
 def call_proper_usage_function(argv):
@@ -18,6 +19,8 @@ def call_proper_usage_function(argv):
         lists_usage_example()
     elif argv[1] == "functionsUsage":
         functions_definition_and_execution_usage_example()
+    elif argv[1] == "runTcpdump":
+        run_tcpdump_on_local_machine()
     else:
         print(func_name + "got an invalid argument")
 
