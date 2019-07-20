@@ -47,6 +47,13 @@ def passing_object_to_func():
     else:
         print(func_name + "after calling callee_func, sample_obj.num is:" + str(sample_obj.num))
 
+    print(func_name + "about to call set_arg_obj_to_none(sample_obj)")
+    sample_obj = set_arg_obj_to_none(sample_obj)
+    if sample_obj is None:
+        print(func_name + "after calling set_arg_obj_to_none(sample_obj), sample_obj is indeed None")
+    else:
+        print(func_name + "after calling set_arg_obj_to_none(sample_obj), sample_obj is NOT None")
+
 
 def callee_func(sample_object):
     func_name = "callee_func - "
@@ -62,3 +69,10 @@ def callee_func(sample_object):
         return False
 
     return True
+
+
+def set_arg_obj_to_none(sample_obj):
+    func_name = "set_arg_obj_to_none - "
+    print(func_name + "setting the recived object to None")
+    sample_obj = None
+    return sample_obj
