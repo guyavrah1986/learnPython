@@ -5,6 +5,7 @@ from learnPython.templateMethodPattern.templateMethodPattern import template_met
 from learnPython.lists_3_1_3.listsUsageExample import lists_usage_example
 from learnPython.functions_4_7.functionDefinitionAndExecutionUsageExample import functions_definition_and_execution_usage_example
 from learnPython.tcpdumpRunner.tcpdumpRunner import run_tcpdump_on_local_machine
+from learnPython.threading_11_4.threadingUsageExample import threading_usage_example
 
 
 def call_proper_usage_function(argv):
@@ -21,6 +22,8 @@ def call_proper_usage_function(argv):
         functions_definition_and_execution_usage_example()
     elif argv[1] == "runTcpdump":
         run_tcpdump_on_local_machine()
+    elif argv[1] == "runThreadingUsageExample":
+        threading_usage_example()
     else:
         print(func_name + "got an invalid argument")
 
