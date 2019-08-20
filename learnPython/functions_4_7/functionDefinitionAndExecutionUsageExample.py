@@ -1,5 +1,6 @@
 from learnPython.functions_4_7.sampleObject import SampleObject
 
+
 def functions_definition_and_execution_usage_example():
     func_name = "functions_definition_and_execution_usage_example - "
     print(func_name + "start")
@@ -76,3 +77,19 @@ def set_arg_obj_to_none(sample_obj):
     print(func_name + "setting the recived object to None")
     sample_obj = None
     return sample_obj
+
+
+def func_with_immutable_default_argument(num, def_list=[]):
+    def_list.append(num)
+    return def_list
+
+
+def call_func_with_immutable_default_argument_several_times():
+    func_name = "call_func_with_immutable_default_argument_several_times - "
+    call_number = 1
+    print(func_name + "after call number:" + str(call_number) + func_with_immutable_default_argument(1))
+    call_number += 1
+    print(func_name + "after call number:" + str(call_number) + func_with_immutable_default_argument(2))
+    call_number += 1
+    print(func_name + "after call number:" + str(call_number) + func_with_immutable_default_argument(3))
+
