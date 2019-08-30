@@ -9,7 +9,7 @@ setup(name="learnPython",
       license="MIT",
       packages=find_packages(),
       include_package_data=True,
-      install_requires=[])
+      install_requires=["scapy"])
 
 # test_suite='nose.collector',
 # tests_require=['nose'],

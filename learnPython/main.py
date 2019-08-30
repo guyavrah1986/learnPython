@@ -26,7 +26,7 @@ def call_proper_usage_function(argv):
     elif argv[1] == "runThreadingUsageExample":
         threading_usage_example()
     elif argv[1] == "scapyUsageExample":
-        scapy_usage_example()
+        scapy_usage_example(argv[2:])
     else:
         print(func_name + "got an invalid argument")
 
