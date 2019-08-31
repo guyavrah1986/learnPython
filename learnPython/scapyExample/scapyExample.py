@@ -35,11 +35,28 @@ def process_pcap(pcap_file_name):
         count += 1
 
         ether_pkt = Ether(pkt_data)
+        '''
         if 'type' not in ether_pkt.fields:
             # LLC frames will have 'len' instead of 'type'.
             # We disregard those
             continue
+        '''
+        print(func_name + "packet[" + str(count) + "] content:\n")
+        #print(ether_pkt.show())
+        isis_common_header = "ISIS Common Header"
 
+        if not ether_pkt.haslayer(isis_common_header):
+            print(func_name + "packet[" + str(count) + "] is NOT an ISIS packet, ignore it")
+            continue
+
+        isis_hello_pdu_type_num = 17
+        isis_common_header_feilds = ether_pkt.getlayer(isis_common_header).fields
+        for key,val in isis_common_header_feilds.items():
+            print(str(key) + ":" + str(val))
+            if val == isis_hello_pdu_type_num:
+                print(func_name + "packet[" + str(count) + "] is ISIS Hello PDU")
+
+        '''
         if ether_pkt.type != 0x0800:
             # disregard non-IPv4 packets
             continue
@@ -48,8 +65,4 @@ def process_pcap(pcap_file_name):
         if ip_pkt.proto != 6:
             # Ignore non-TCP packet
             continue
-
-        interesting_packet_count += 1
-
-    print(func_name + '{} contains {} packets ({} interesting)'.
-          format(pcap_file_name, count, interesting_packet_count))
+        '''
