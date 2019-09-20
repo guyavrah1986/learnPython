@@ -8,6 +8,7 @@ from learnPython.tcpdumpRunner.tcpdumpRunner import run_tcpdump_on_local_machine
 from learnPython.threading_11_4.threadingUsageExample import threading_usage_example
 from learnPython.scapyExample.scapyExample import scapy_usage_example
 from learnPython.modules_6_1.module_1.module_1 import modules_usage_examples
+#import learnPython.modules_6_1.module_2.module_2
 
 
 def call_proper_usage_function(argv):
@@ -29,7 +30,7 @@ def call_proper_usage_function(argv):
     elif argv[1] == "scapyUsageExample":
         scapy_usage_example(argv[2:])
     elif argv[1] == "modulesUsageExample":
-        modules_usage_examples()
+        modules_usage_examples(argv[2:])
     else:
         print(func_name + "got an invalid argument")
 

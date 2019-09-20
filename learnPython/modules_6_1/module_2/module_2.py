@@ -9,3 +9,6 @@ def func1(arg1):
     func_name = __name__ + "::func1 - "
     print(func_name + "start")
     print(func_name + "got arg1:" + str(arg1))
+
+
+print("this is a \"stand alone\" statement within " + __name__ + " module")
