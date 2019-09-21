@@ -13,13 +13,30 @@
 from scapy.utils import RawPcapReader
 from scapy.layers.l2 import Ether
 
+from learnPython.scapyWrapper.pcapFileParser import PcapFileParser
+from learnPython.scapyWrapper.basePacketParser import BasePacketParser
+
+# NOTE!! Even though this import seems to be redundant, keep it anyways cause otherwise the ISIS
+# packet parsing seems not to work entirely.
+from scapy.contrib.isis import absolute_import
+
 
 def scapy_usage_example(argv):
     func_name = "scapy_usage_example - "
     print(func_name + "start")
     pcap_file_name = argv[0]
     print(func_name + "got pcap file name:" + pcap_file_name)
-    process_pcap(pcap_file_name)
+    #process_pcap(pcap_file_name)
+    pcap_file_parser = PcapFileParser(pcap_file_name)
+    packet_to_analyze_number = int(argv[1])
+    packet_data_to_analyze = pcap_file_parser.get_specific_packet(packet_to_analyze_number)
+    if packet_data_to_analyze is None:
+        print(func_name + "the given pcap file did not contain the " + str(packet_to_analyze_number))
+        return 1
+
+    base_packet = BasePacketParser(packet_data_to_analyze)
+    packet_time = base_packet.packet_parser_get_packet_time()
+    print(func_name + "packet time is:" + str(packet_time))
     return 0
 
 
@@ -42,6 +59,9 @@ def process_pcap(pcap_file_name):
         print(func_name + "packet[" + str(count) + "] content:\n")
         #print(ether_pkt.show())
         isis_common_header = "ISIS Common Header"
+
+        for key,val in ether_pkt.fields.items():
+            print(str(key) + ":" + str(val))
 
         if not ether_pkt.haslayer(isis_common_header):
             print(func_name + "packet[" + str(count) + "] is NOT an ISIS packet, ignore it")
