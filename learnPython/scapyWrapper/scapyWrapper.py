@@ -5,16 +5,14 @@
 # 1) Installation (Python 3, Ubuntu 18.04):
 # ----------------------------------------
 # a) pip3 install scapy
-# b) toverify it is installed correctly:
+# b) to verify it is installed correctly:
 # python3 -c "import scapy"
 # echo $? (output should be "0")
 #########################################################################################
 #########################################################################################
 from scapy.utils import RawPcapReader
 from scapy.layers.l2 import Ether
-from scapy.layers.inet import IP
 
-import scapy.contrib.isis
 
 def scapy_usage_example(argv):
     func_name = "scapy_usage_example - "
