@@ -4,4 +4,6 @@ learnPython.egg-info/
 learnPython/__pycache__/
 __pycache__/
 learnPython_env/
+build/
+dist/
 
