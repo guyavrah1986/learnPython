@@ -15,6 +15,7 @@ def run_tcpdump_on_local_machine():
                           "-i", interface_name,
                           "-w", capture_file_name],
                          stdout=subprocess.PIPE)
+    print(func_name + "about to sleep for " + str(num_sec_to_sleep) + " seconds")
     time.sleep(num_sec_to_sleep)
     p.terminate()
     print(func_name + "end")
