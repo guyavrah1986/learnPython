@@ -1,5 +1,5 @@
 # learnPython
-Educational code for learning purposes of Python.
+Educational code for learning purposes of Python 3.
 
 # References:
 - The examples and samples in this tutorial are "according" to the official Python tutorial:
