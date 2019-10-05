@@ -8,7 +8,6 @@ from learnPython.tcpdumpRunner.tcpdumpRunner import run_tcpdump_on_local_machine
 from learnPython.threading_11_4.threadingUsageExample import threading_usage_example
 from learnPython.scapyWrapper.scapyWrapper import scapy_usage_example
 from learnPython.modules_6_1.module_1.module_1 import modules_usage_examples
-#import learnPython.modules_6_1.module_2.module_2
 
 
 def call_proper_usage_function(argv):
