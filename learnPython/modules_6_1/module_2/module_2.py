@@ -8,7 +8,8 @@ global_var_1 = __name__ + " global variable"
 def func1(arg1):
     func_name = __name__ + "::func1 - "
     print(func_name + "start")
-    print(func_name + "got arg1:" + str(arg1))
+    print(func_name + "got arg:" + str(arg1))
+    print(func_name + "end")
 
 
 print("this is a \"stand alone\" statement within " + __name__ + " module")
