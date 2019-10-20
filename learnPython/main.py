@@ -39,7 +39,7 @@ def call_proper_usage_function(argv):
 def main(argv):
     func_name = "main - "
     print(func_name + "start")
-    print(func_name + "got command line arguments:\n")
+    print(func_name + "got the following command line arguments:\n")
     print(argv)
     call_proper_usage_function(argv)
     print(func_name + "end")
