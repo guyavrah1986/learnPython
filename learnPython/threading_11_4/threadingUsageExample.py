@@ -1,6 +1,7 @@
+import time
 from threading import Thread
 from abc import ABCMeta, abstractmethod
-import time
+
 
 
 def threading_usage_example():
