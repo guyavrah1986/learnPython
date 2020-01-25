@@ -13,30 +13,25 @@
 # is actually "converted" to the following:
 # MyClass.print_me(my_class_obj) --> you got it right, the my_class_obj in run-time is
 # the self "first argument")
+# The "self" keyword can also be thought of that it serves as an indicator that this function/member is NOT static.
 #
 # 4) All class data members that are defined "in between" the class name and the rest of
 # the class's methods are "all instance" member (similar to static class members in C++).
-
-# every function in a class MUST have the self as the first argument in order to indicate
-# that it is NOT a static function.
-
+# Instance members are usually (best practice) defined in the class CTOR --> the __init__
+# method.
+#
+# 5) It is also possible to define an instance data member NOT in the CTOR (__init__) method
+# BUT it considered as NOT good practice cause if it is accessed from other class function before
+# the class where it is defined, then a run time exception will be thrown.
+# It is also worth to mention that in when accessing class member, the "inner scope" has advantage
+# over the "global" scope.
+# 
 # upon assignment:
 # every variable which is an object is copied by reference
 # in any other case (int, float,etc...) is copied by value
 
 # the garbage collector "kicks in" ONLY after there is no references pointed to the
 # object (note that it "kicks in" in a non deterministic manner).
-
-# objects characteristics:
-# =======================
-# 1) un like other object oriented, an object in a class MUST have a ctor --> this is the
-# __init__(self,....) method.
-# 2) the "self" keyword is used to indicate that this function/member is NOT static.
-# 3) ALL class (object) members MUST be defined in the ctor of the class.
-# 3.1) It is possible to define a class member NOT in the ctor, yet it is not a good
-# practice, cause if it is accessed from other class function before the class where it
-# is defined, then a run time exception will be thrown.
-# 4) The "self" notation is to make sure that the class function/member's is
 #########################################################################################
 
 
@@ -52,6 +47,7 @@ class MyClass:
         pass
 
     def print_me(self):
+        # 5)
         self.x = 17
         print("MyClass::print_me - num is:" + str(self.num) + ", string is:" + self.string)
         print("MyClass::print_me - self.x is:" + str(self.x))
