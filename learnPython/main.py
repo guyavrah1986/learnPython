@@ -8,6 +8,7 @@ from learnPython.tcpdumpRunner.tcpdumpRunner import run_tcpdump_on_local_machine
 from learnPython.threading_11_4.threadingUsageExample import threading_usage_example
 from learnPython.scapyWrapper.scapyWrapper import scapy_usage_example
 from learnPython.modules_6_1.module_1.module_1 import modules_usage_examples
+from learnPython.dictionaries.dictionary_usage_example import dictionary_usage_example
 
 
 def call_proper_usage_function(argv):
@@ -20,6 +21,8 @@ def call_proper_usage_function(argv):
         template_method_pattern_usage_example()
     elif argv[1] == "listsUsage":
         lists_usage_example()
+    elif argv[1] == "dictionaryUsageExample":
+        dictionary_usage_example()
     elif argv[1] == "functionsUsage":
         functions_definition_and_execution_usage_example()
     elif argv[1] == "runTcpdump":
