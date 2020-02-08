@@ -37,4 +37,6 @@ def string_format_example():
     func_name = "string_format_example - "
     print(func_name + "start")
     print("This is {0} {1} {2} {3} {4}".format("an", "example", "of", "using", "format"))
+    val = 100/777
+    print(func_name + "the result is:{v:1.4f}".format(v=val))
     print(func_name + "end")
