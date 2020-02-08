@@ -1,5 +1,17 @@
 from learnPython.functions_4_7.sampleObject import SampleObject
 
+def func_with_arbitrary_number_of_arguments(*args):
+    """
+    Functions with a single argument noted by * can receive as many arguments as needed, where the only thing to note here is that
+    all the arguments that are passed are treated (in the function) as a tuple. So if the function is called as follows:
+    func_with_arbitrary_number_of_arguments(1,2,3) --> then the arguments sent to the function are the following tuple: (1, 2, 3)
+    """
+    func_name = "func_with_arbitrary_number_of_arguments - "
+    print(func_name + "start")
+    arg_num = 0
+    for arg in args:
+        print(func_name + "arg[" + str(arg_num) + "]:" + str(arg))
+
 
 def functions_definition_and_execution_usage_example():
     func_name = "functions_definition_and_execution_usage_example - "
