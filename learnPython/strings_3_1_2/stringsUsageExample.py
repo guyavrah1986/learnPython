@@ -4,6 +4,7 @@ def strings_usage_example():
     print(func_name + "start")
     string_definition_example()
     immutablity_of_string()
+    string_format_example()
     print(func_name + "end")
 
 
@@ -24,10 +25,16 @@ def immutablity_of_string():
     # str1[1] = "b"
     # TypeError: 'str' object does not support item assignment
     # this is because strings are immuatable objects in Python
-    #str1[1] = "b"
     #print(func_name + "now str1 is:" + str1)
 
     # what actually happens here is that a "new string" is being constructed and
     # then aassgined (thus overrides) the old value of str1.
     str1 = "new_str"
     print(func_name + "now str1 is:" + str1)
+
+
+def string_format_example():
+    func_name = "string_format_example - "
+    print(func_name + "start")
+    print("This is {0} {1} {2} {3} {4}".format("an", "example", "of", "using", "format"))
+    print(func_name + "end")
