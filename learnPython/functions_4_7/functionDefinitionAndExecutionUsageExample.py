@@ -1,5 +1,14 @@
 from learnPython.functions_4_7.sampleObject import SampleObject
 
+def func_with_kwargs(**kwargs):
+    """
+    Functions that have the **kwargs as their argument actually recive from the user a dictionary of the form: 
+    {arg1_name:arg1_val, arg2_name:arg2_val, ...}. 
+    """
+    key_in_dict_args = "some_key"
+    if key_in_dict_args in kwargs:
+        print("the value of the key:" + key_in_dict_args + ", is:" + str(kwargs[key_in_dict_args]))
+
 def func_with_arbitrary_number_of_arguments(*args):
     """
     Functions with a single argument noted by * can receive as many arguments as needed, where the only thing to note here is that
