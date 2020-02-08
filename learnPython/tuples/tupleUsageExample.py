@@ -12,4 +12,11 @@ def tuple_usage_example():
     if num_of_appearances > 1:
         print(func_name + "the first appearances of " + val_to_look + " is at index:" + str(my_tuple.index(val_to_look)))
 
+    # tuple is immutable - so no "re-assignment" is possible
+    try:
+        my_tuple[0] = "new_val"
+    except TypeError:
+        print(func_name + "tried to assign new value to a tuple index, but tuple is immutable, so re-assigning"
+              + " is NOT possible")
+
     print(func_name + "end")
