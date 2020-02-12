@@ -64,6 +64,22 @@ def namespace_example():
     namespace_illustration_in_other_module()
     print(func_name + "end")
 
+# GLOBAL namespace
+x = 12
+
+def func1():
+    # ENCLOSING namespace
+    x = 15
+    
+    def func2():
+        # LOCAL namespace
+        x = 17
+        print("func2 - x is:" + str(x))
+        
+    func2()
+
+print("about to call func1")
+func1()
 
 if __name__ == "__main__":
 	namespace_example()
