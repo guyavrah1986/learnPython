@@ -11,6 +11,8 @@ from learnPython.modules_6_1.module_1.module_1 import modules_usage_examples
 from learnPython.dictionaries.dictionary_usage_example import dictionary_usage_example
 from learnPython.tuples.tupleUsageExample import tuple_usage_example
 from learnPython.builtInOperators.builtInOperators import built_in_operators_usage_example
+from learnPython.errors_and_exceptions_8.exceptionHandling import exception_handling_usage_example
+
 
 def call_proper_usage_function(argv):
     func_name = "call_proper_usage_function - "
@@ -38,6 +40,8 @@ def call_proper_usage_function(argv):
         scapy_usage_example(argv[2:])
     elif argv[1] == "modulesUsageExample":
         modules_usage_examples(argv[2:])
+    elif argv[1] == "exceptionHandlingUsageExample":
+        exception_handling_usage_example()
     else:
         print(func_name + "got an invalid argument")
 
