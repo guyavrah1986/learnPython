@@ -64,6 +64,31 @@ def namespace_example():
     namespace_illustration_in_other_module()
     print(func_name + "end")
 
+# GLOBAL namespace
+x = 12
+
+def func1():
+    # ENCLOSING namespace
+    x = 15
+    
+    def func2():
+        # LOCAL namespace
+        x = 17
+        print("func2 - x is:" + str(x))
+
+    def func3():
+        # When using the global keyword - the variable that is taking into
+        # account is NOT the "next outer" but the actual GLOBAL vartiable - i.e. the vartiable
+        # that is defined outside of ANY function within this module (Python file in this case)
+	# so in this case, the statment below will print 12 (global value)
+        global x 
+        print("func3 - x is:" + str(x))
+        
+    func2()
+    func3()
+
+print("about to call func1")
+func1()
 
 if __name__ == "__main__":
 	namespace_example()

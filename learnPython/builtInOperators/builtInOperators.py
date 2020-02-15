@@ -23,3 +23,16 @@ def built_in_operators_usage_example():
     my_new_list = [letter for letter in "abcde"]
     print(func_name + "my_new_list is:" + str(my_new_list))
     print(func_name + "end")
+    
+def my_square_func(num: int) -> int:
+    return num * num
+
+def map_example():
+    func_name = "map_example - "
+    print(func_name + "start")
+    num_list = [1, 2, 3]
+    index = 0
+    for item in map(my_square_func, num_list):
+        print(func_name + "the square value of:" + str(num_list[index]) + " is:" + str(item))
+        index += 1
+    print(func_name + "end")
