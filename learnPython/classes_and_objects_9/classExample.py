@@ -3,7 +3,7 @@
 # local scope thus, all assignments to local variables go into this new namespace.
 # In particular, function definitions bind the name of the new function here.
 #
-# 2) It is possible to add a "new" attribute, for instance class member to a particular
+# 2) It is possible to add a "new" attribute, for instance class member to a particular (!!)
 # object instance. Note however, that this "new additional class member" will be relevant
 # ONLY for the specific object instance it was added in.
 #
@@ -12,8 +12,9 @@
 # my_class_obj.print_me()
 # is actually "converted" to the following:
 # MyClass.print_me(my_class_obj) --> you got it right, the my_class_obj in run-time is
-# the self "first argument")
-# The "self" keyword can also be thought of that it serves as an indicator that this function/member is NOT static.
+# the self "first argument".
+# The "self" keyword can also be thought of that it serves as an indicator that this function/member
+# is NOT static.
 #
 # 4) All class data members that are defined "in between" the class name and the rest of
 # the class's methods are "all instance" member (similar to static class members in C++).
@@ -21,9 +22,9 @@
 # method.
 #
 # 5) It is also possible to define an instance data member NOT in the CTOR (__init__) method
-# BUT it considered as NOT good practice cause if it is accessed from other class function before
+# BUT it NOT considered as a good practice cause if it is accessed from other class function before
 # the class where it is defined, then a run time exception will be thrown.
-# It is also worth to mention that in when accessing class member, the "inner scope" has advantage
+# It is also worth to mention that when accessing class member, the "inner scope" has advantage
 # over the "global" scope.
 # 
 # upon assignment:
