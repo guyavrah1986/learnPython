@@ -8,7 +8,7 @@
 # 1) A name (also called identifier) is simply a name given to objects.
 # Everything in Python is an object. Name is a way to access the underlying
 # object.
-# 2) When Python "defines" an object with a value they both (initialy) "points"
+# 2) When Python "defines" an object with a value they both (initially) "points"
 # to the same address in memory.
 # 3) The new value (18 in this case) that int_obj now refers to, gets a "new"
 # address in memory. If the address of the object 18 should be displayed it will
@@ -21,8 +21,8 @@
 #
 #########################################################################################
 #########################################################################################
-from learnPython.chapter_9_objects.otherModule import other_module_outer_func
-from learnPython.chapter_9_objects.otherModuleGlobalVar import other_module_outer_func_global
+from learnPython.classes_and_objects_9.otherModule import other_module_outer_func
+from learnPython.classes_and_objects_9.otherModuleGlobalVar import other_module_outer_func_global
 
 
 def name_illustration():
@@ -64,8 +64,10 @@ def namespace_example():
     namespace_illustration_in_other_module()
     print(func_name + "end")
 
+
 # GLOBAL namespace
 x = 12
+
 
 def func1():
     # ENCLOSING namespace
@@ -78,17 +80,18 @@ def func1():
 
     def func3():
         # When using the global keyword - the variable that is taking into
-        # account is NOT the "next outer" but the actual GLOBAL vartiable - i.e. the vartiable
+        # account is NOT the "next outer" but the actual GLOBAL variable - i.e. the variable
         # that is defined outside of ANY function within this module (Python file in this case)
-	# so in this case, the statment below will print 12 (global value)
+        # so in this case, the statment below will print 12 (global value)
         global x 
         print("func3 - x is:" + str(x))
         
     func2()
     func3()
 
+
 print("about to call func1")
 func1()
 
 if __name__ == "__main__":
-	namespace_example()
+    namespace_example()
