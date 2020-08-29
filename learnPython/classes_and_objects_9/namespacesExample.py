@@ -90,7 +90,7 @@ def func1():
     func3()
 
 
-print("about to call func1")
+print("about to call func1 from global namespace")
 func1()
 
 if __name__ == "__main__":
