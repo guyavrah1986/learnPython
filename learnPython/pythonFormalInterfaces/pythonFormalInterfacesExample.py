@@ -1,10 +1,12 @@
 #########################################################################################################
+#########################################################################################################
 # Python formal interface:
 # In a way, they are very similar to C++ classes where all the methods are pure virtual function, thus
 # inheriting from this class enforces the sub classes to implement all the function of the interface
 # class.
 # 1) Creating a Male object is possible cause it implemtns all the interface's methods.
 # 2) Creating a Female object is not possible cause it does NOT implement all the interface's method.
+#########################################################################################################
 #########################################################################################################
 import abc
 
