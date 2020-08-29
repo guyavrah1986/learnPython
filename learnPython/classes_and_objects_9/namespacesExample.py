@@ -82,7 +82,7 @@ def func1():
         # When using the global keyword - the variable that is taking into
         # account is NOT the "next outer" but the actual GLOBAL variable - i.e. the variable
         # that is defined outside of ANY function within this module (Python file in this case)
-        # so in this case, the statment below will print 12 (global value)
+        # so in this case, the statement below will print 12 (global value)
         global x 
         print("func3 - x is:" + str(x))
         
