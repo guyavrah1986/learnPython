@@ -1,2 +1,2 @@
 def func_with_differences():
-    return "Apple"
+    return "Berry"
