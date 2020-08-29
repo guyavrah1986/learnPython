@@ -3,7 +3,6 @@
 def tuple_usage_example():
     func_name = "tuple_usage_example - "
     print(func_name + "start")
-    print(func_name + "end")
     my_tuple = ("1", "a", "b", "5", "a")
     print(func_name + "my_tuple is:" + str(my_tuple))
     val_to_look = "a"
