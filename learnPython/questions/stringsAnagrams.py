@@ -1,7 +1,4 @@
 
-
-
-def (str1: str, str2: str) -> bool:
 def create_sub_string_chars_dict(self, sub_string: str) -> dict:
     ret_dict = {}
     for c in sub_string:
@@ -9,7 +6,8 @@ def create_sub_string_chars_dict(self, sub_string: str) -> dict:
 
     return ret_dict
 
-def check_anagram_strings(self, s: str, p: str) -> List[int]:
+
+def check_anagram_strings(self, s: str, p: str) -> list:
     print("s is:" + s + ", p is:" + p)
     ret_list = []
     len_s = len(s)
@@ -33,3 +31,28 @@ def check_anagram_strings(self, s: str, p: str) -> List[int]:
         index += 1
 
     return ret_list
+
+
+def is_anagram(self, s: str, t: str) -> bool:
+    print("s is:" + s + ", t is:" + t)
+    len_s = len(s)
+    len_t = len(t)
+    if len_t < len_s:
+        print("the anagram string is shorter than the original string, aborting")
+        return False
+
+    t_string_dict = self.create_sub_string_chars_dict(t)
+    print("the dictionary for the t string is:" + str(t_string_dict))
+    index = 0
+    while index <= (len_s - len_t):
+        print("processing char[" + str(index) + "]:" + s[index])
+        sub_string_to_check = s[index:index + len_t]
+        print("about to check sub string:" + sub_string_to_check)
+        sub_string_dict = self.create_sub_string_chars_dict(sub_string_to_check)
+        print("the dictionary for sub string:" + sub_string_to_check + ", is:" + str(sub_string_dict))
+        if sub_string_dict == t_string_dict:
+            return True
+
+        index += 1
+
+    return False
