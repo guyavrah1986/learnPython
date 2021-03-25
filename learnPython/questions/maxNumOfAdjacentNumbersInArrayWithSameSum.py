@@ -1,5 +1,5 @@
 '''
-Given an array of integers, return the maximum number of adjacent numberin the array that thier sum
+Given an array of integers, return the maximum number of adjacent numbers in the array that their sum
 is equal.
 '''
 
@@ -22,7 +22,7 @@ def get_max_num_of_adjacent_numbers_with_same_sum(arr: list) -> int:
 
 
 arr = [1, 4, 5, 0, 13, 7, 2, 3]
-expected_val = 3
+expected_val = 3  # {arr[0],arr[1]} {arr[2], arr[3]} {arr[6], arr[7]}
 ret_val = get_max_num_of_adjacent_numbers_with_same_sum(arr)
 if ret_val != expected_val:
     print("expected to get:" + str(expected_val) + ", BUT got:" + str(ret_val))

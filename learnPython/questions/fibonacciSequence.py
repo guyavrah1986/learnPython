@@ -1,12 +1,13 @@
+"""
+Create the first N elements in the Fibonacci sequence.
+"""
 
 
 def get_fibonacci_sequence(num_of_elements_in_the_sequence: int) -> list:
     print("need to create first " + str(num_of_elements_in_the_sequence) + " elements in the"
-          + " fibonnaci sequence")
-    ret_list = []
+          + " Fibonacci sequence")
     prev_prev_element = 0
     prev_element = 1
-
     ret_list.append(prev_prev_element)
     ret_list.append(prev_element)
     for i in range(num_of_elements_in_the_sequence - 2):
