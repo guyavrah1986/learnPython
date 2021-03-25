@@ -9,7 +9,7 @@ def check_adjacent_numbers_in_array(arr: list) -> bool:
     numbers_in_arr_dict = {}
     for num in arr:
         numbers_in_arr_dict[num] = 1
-        if numbers_in_arr_dict.get(num - 1, None) is not None or numbers_in_arr_dict.get(num +1, None) is not None:
+        if numbers_in_arr_dict.get(num - 1, None) is not None or numbers_in_arr_dict.get(num + 1, None) is not None:
             return True
 
     return False
@@ -19,5 +19,5 @@ arr = [1, 4, 6, 33, 9]
 ret_code = check_adjacent_numbers_in_array(arr)
 expected_val = True
 if ret_code != expected_val:
-    print("expected to recieve:" + str(expected_val) + " BUT got:" + str(ret_code))
+    print("expected to receive:" + str(expected_val) + " BUT got:" + str(ret_code))
     exit(1)
