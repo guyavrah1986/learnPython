@@ -14,22 +14,26 @@ def turn_number_to_zero(number: str) -> int:
         print("empty number")
         return num_of_operations_needed
 
-    while str_len > 0:
-        print("number is:" + number + "(" + str(int(number, 2)) + " in decimal)")
-        print("checking number[" + str(str_len - 1) + "]:" + str(number[str_len - 1]))
+    index = str_len - 1
+    while index > 0:
+        print("===========================\nnumber is:" + number + "(" + str(int(number, 2)) + " in decimal)\n===========================")
+        print("checking number[" + str(index) + "]:" + str(number[index]))
         # subtract by 1 is needed
-        if number[str_len - 1] == "1":
+        if number[index] == "1":
             print("LSB digit is one, increment the number of operations, change it to zero, and move on")
-            number = number[: str_len - 1] + "0"
+            number = number[: index] + "0"
+            num_of_operations_needed += 1
             print("after changing the last digit, number is:" + number)
         else:
-            print("number[" + str(str_len - 1) + "] is zero, traversing the number till reaching 1")
-            while str_len > 0 and number[str_len - 1] == "0":
-                str_len -= 1
-                num_of_operations_needed += 1
+            print("the right most digit (LSB) in the string number[" + str(index) + "] is zero, traversing"
+                  + " the number from right to left till reaching 1")
+            while index > 0 and number[index] == "0":
+                index -= 1
 
-            number = number[: str_len]
+            print("hit first 1 from right (LSB) to left (MSB) at index:" + str(index))
+            number = number[: index + 1]
             print("after sub string number is:" + number)
+            num_of_operations_needed += 1
 
     return num_of_operations_needed
 
@@ -66,10 +70,10 @@ def calculate_(s):
     return count_
 
 
-num = "10000100000"
+num = "1101"
 decimal_value = int(num, 2)
 print("the number in decimal is:" + str(decimal_value))
-ret_val = calculate_(num)
+ret_val = turn_number_to_zero(num)
 expected_val = 4
 if ret_val != expected_val:
     print("expected return value of:" + str(expected_val) + ", BUT instead got:" + str(ret_val))

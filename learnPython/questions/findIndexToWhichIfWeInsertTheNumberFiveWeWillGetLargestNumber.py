@@ -25,7 +25,7 @@ ret_val = get_index_to_which_if_num_is_inserted_then_we_get_largest_number(num_t
 if ret_val != expected_ret_val:
     print("got ret val:" + str(ret_val) + ", BUT expected to get:" + str(expected_ret_val))
     exit(1)
-    
+
 arr = [1, 2, 3, 4]
 expected_ret_val = 0
 ret_val = get_index_to_which_if_num_is_inserted_then_we_get_largest_number(num_to_insert, arr)
