@@ -1,3 +1,7 @@
+'''
+Given two strings, A and B such that B isn't longer than A, return True or False if B is a
+sub-string permutation of A.
+'''
 from learnPython.questions.questionsUtils import create_sub_string_chars_dict
 
 
@@ -24,10 +28,9 @@ def permutation_sub_string(str1: str, str2: str) -> bool:
 
 str1 = "abcde"
 str2 = "rabc"
-if permutation_sub_string(str1, str2):
-    add_to_output = ""
-else:
-    add_to_output = "NOT"
+expected_ret_val = False
+ret_val = permutation_sub_string(str1, str2)
+if ret_val != expected_ret_val:
+    print("expected to get:" + str(expected_ret_val) + " but got:" + str(ret_val))
+    exit(1)
 
-output = str2 + " is " + add_to_output + " a permutation sub string of:" + str1
-print(output)
