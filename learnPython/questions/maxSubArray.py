@@ -18,7 +18,7 @@ Output: 23
 '''
 import math
 
-
+# O(N^2)
 def get_max_sub_array(nums: list) -> int:
     max_subarray = -math.inf
     for i in range(len(nums)):
@@ -26,5 +26,19 @@ def get_max_sub_array(nums: list) -> int:
         for j in range(i, len(nums)):
             current_subarray += nums[j]
             max_subarray = max(max_subarray, current_subarray)
+
+    return max_subarray
+
+
+# Kaden algorithm (greedy algorithm)
+def maxSubArray(self, nums: list) -> int:
+    # Initialize our variables using the first element.
+    current_subarray = max_subarray = nums[0]
+
+    # Start with the 2nd element since we already used the first one.
+    for num in nums[1:]:
+        # If current_subarray is negative, throw it away. Otherwise, keep adding to it.
+        current_subarray = max(num, current_subarray + num)
+        max_subarray = max(max_subarray, current_subarray)
 
     return max_subarray
