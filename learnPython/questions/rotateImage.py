@@ -1,5 +1,5 @@
 '''
-
+Write a function that rotate a matrix by 90 "degrees" to the right.
 '''
 from learnPython.questions.questionsUtils import print_two_dim_matrix
 
@@ -20,9 +20,10 @@ def reflect(matrix):
     n = len(matrix)
     for i in range(n):
         for j in range(n // 2):
-            matrix[i][j], matrix[i][-j - 1] = matrix[i][-j - 1], matrix[i][j]
-
-
+            #matrix[i][j], matrix[i][-j - 1] = matrix[i][-j - 1], matrix[i][j]
+            tmp = matrix[i][j]
+            matrix[i][j] = matrix[i][n - j - 1]
+            matrix[i][n - j - 1] = tmp
 
 
 matrix_to_rotate = [[1,2, 3], [4, 5, 6], [7, 8, 9]]
