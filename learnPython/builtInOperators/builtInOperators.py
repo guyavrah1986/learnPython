@@ -8,7 +8,7 @@ def built_in_operators_usage_example():
     # to a tuple composed of: value,index
     # list into a tuple
     my_string = "abcd"
-    print(func_name + "enumerating " + my_string + "returns:")
+    print(func_name + "enumerating:" + my_string + " returns:")
     for item1, item2 in enumerate(my_string):
         print(item1, item2)
 

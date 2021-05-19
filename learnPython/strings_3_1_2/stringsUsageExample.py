@@ -24,11 +24,11 @@ def immutablity_of_string():
     # if the below line will be commented out, the following error will rise:
     # str1[1] = "b"
     # TypeError: 'str' object does not support item assignment
-    # this is because strings are immuatable objects in Python
+    # this is because strings are immutable objects in Python
     #print(func_name + "now str1 is:" + str1)
 
     # what actually happens here is that a "new string" is being constructed and
-    # then aassgined (thus overrides) the old value of str1.
+    # then assigned (thus overrides) the old value of str1.
     str1 = "new_str"
     print(func_name + "now str1 is:" + str1)
 
@@ -40,3 +40,7 @@ def string_format_example():
     val = 100/777
     print(func_name + "the result is:{v:1.4f}".format(v=val))
     print(func_name + "end")
+
+
+if __name__ == "__main__":
+    strings_usage_example()
