@@ -11,7 +11,7 @@
 # - string (str)
 # - tuple
 # - primitive types: int, bool, decimal, float,
-# -range
+# - range
 # 2) If the object type being passed is MUTABLE:
 # 2.1) It can be altered by the function, meaning, changing "part" of it (for example, an item in a list)
 # is possible, meaning, when passing a mutable object to a function, each change in the content of the

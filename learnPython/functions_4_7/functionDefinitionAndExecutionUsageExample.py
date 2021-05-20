@@ -9,6 +9,7 @@ def functions_definition_and_execution_usage_example():
     func_with_arbitrary_number_of_arguments(1, 2, "Rotem", 7.8)
     function_call_example()
     passing_object_to_func()
+    passing_object_to_func()
     print(func_name + "end")
 
 
