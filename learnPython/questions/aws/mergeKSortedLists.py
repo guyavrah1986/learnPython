@@ -66,9 +66,16 @@ def merge_k_sorted_lists(lists: list) -> ListNode:
                 curr_min_head = curr_heads_list[i]
                 curr_min_head_index_in_list = i
 
+        if len(ret_list) > 0:
+            # set the next filed of the current last element of the list to be the
+            # node that is about to be added
+            ret_list[-1].next = curr_min_head
+
         # now we have the current "min head", which is by the problem definition
         # the minimum elements amongst all list, so append it to the final list
         ret_list.append(curr_min_head)
+
+
 
         # if the next field of the curr_min_head is None, than it means that we are "done"
         # with this list, otherwise, overwrite this "list's head" with the next value of the
@@ -84,12 +91,8 @@ def merge_k_sorted_lists(lists: list) -> ListNode:
 
         print("NULL")
 
-    # when we got here, the ret_list should be sorted in ascending order
-    print("the composed list is:")
-    for node in ret_list:
-        print(node, end="")
+    return ret_list[0]
 
-    print("NULL")
 
 item3_list_1 = ListNode(5, None)
 item2_list_1 = ListNode(4, item3_list_1)
@@ -110,6 +113,14 @@ list_3 = [item1_list_3, item2_list_3]
 lists = [list_1, list_2, list_3]
 expected_output = [1,1,2,3,4,4,5,6]
 ret_val = merge_k_sorted_lists(lists)
+tmp_head = ret_val
+print("the returned list is:")
+while tmp_head is not None:
+    print(tmp_head, end="")
+    tmp_head = tmp_head.next
+
+print("NULL")
+
 if ret_val != expected_output:
     print("got sorted list:" + str(ret_val) + ", BUT expected it to be:" + str(expected_output))
     exit(1)
