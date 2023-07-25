@@ -22,7 +22,7 @@
 # method.
 #
 # 5) It is also possible to define an instance data member NOT in the CTOR (__init__) method
-# BUT it NOT considered as a good practice cause if it is accessed from other class function before
+# BUT it Is NOT considered as a good practice cause if it is accessed from other class function before
 # the class where it is defined, then a run time exception will be thrown.
 # It is also worth to mention that when accessing class member, the "inner scope" has advantage
 # over the "global" scope.
