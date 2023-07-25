@@ -1,11 +1,12 @@
 #########################################################################################################
 #########################################################################################################
 # Python formal interface:
-# In a way, they are very similar to C++ classes where all the methods are pure virtual function, thus
-# inheriting from this class enforces the sub classes to implement all the function of the interface
-# class.
-# 1) Creating a Male object is possible cause it implemtns all the interface's methods.
-# 2) Creating a Female object is not possible cause it does NOT implement all the interface's method.
+# ------------------------
+# In a way, they are very similar to C++ classes where all the methods are pure virtual functions (i.e. 
+# pure virtual class), thus inheriting from this class enforces the sub classes to implement all the 
+# functions of the interface's class.
+# 1) Creating a Male object is possible cause it implemnts all the interface's methods.
+# 2) Creating a Female object is NOT possible cause it does NOT implement all the interface's method.
 #########################################################################################################
 #########################################################################################################
 import abc
@@ -31,7 +32,7 @@ class PersonInterface(metaclass=abc.ABCMeta):
 
 class Male(PersonInterface):
 
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
 
@@ -44,7 +45,7 @@ class Male(PersonInterface):
 
 class Female(PersonInterface):
 
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
 
     def get_name(self):
