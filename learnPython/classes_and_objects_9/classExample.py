@@ -90,14 +90,6 @@ def classes_and_object_example():
     print(func_name + "while on the other hand it is STILL seen by my_class_obj.class_data_member"
           + " as:" + str(my_class_obj.class_data_member))
 
-    # access specifier section
-    # ========================
-    #my_derived_obj = MyDerivedClass(23)
-    #my_derived_obj.print_protected_class_member()
-
-    # when trying to access a private member
-    #print("the private member of the object is:" + str(MyClass.__private_member))
-
 
 if __name__ == "__main__":
     classes_and_object_example()
