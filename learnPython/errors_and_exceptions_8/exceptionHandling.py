@@ -34,3 +34,7 @@ def func_that_catches_multiple_exception_types():
         print(func_name + "caught a general exception")
 
     print(func_name + "end")
+
+
+if __name__ == "__main__":
+    exception_handling_usage_example()
