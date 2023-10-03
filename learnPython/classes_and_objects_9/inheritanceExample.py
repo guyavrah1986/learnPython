@@ -1,5 +1,5 @@
 #########################################################################################
-# 1) Every method of a Base class is can be override by the Derived class. In C++ terms
+# 1) Every method of a Base class can be overriden by the Derived class. In C++ terms
 # every method in the Base class is effectively virtual.
 #
 # 2) It is possible to "enforce" invocation" of a method of the Base class by explicitly
